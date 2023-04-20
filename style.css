@@ -132,6 +132,7 @@ li > * {
 
 .checkbox-task {
   margin: 0 10px;
+  cursor: pointer;
 }
 
 li > label {
