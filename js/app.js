@@ -1,16 +1,13 @@
-//Document is the DOM can be accessed in the console with document.window.
-// Tree is from the top, html, body, p etc.
+// ! Problem: User interaction does not provide the correct results.
+// TODO Solution: Add interactivity so the user can manage daily tasks.
+// * Break things down into smaller steps and take each step at a time.
 
-//Problem: User interaction does not provide the correct results.
-//Solution: Add interactivity so the user can manage daily tasks.
-//Break things down into smaller steps and take each step at a time.
+// * Event handling, user interaction is what starts the code execution.
 
-// Event handling, user interaction is what starts the code execution.
-
-var taskInput = document.getElementById("add-task"); //Add a new task.
-var addButton = document.getElementsByTagName("button")[0]; //first button
-var incompleteTaskHolder = document.getElementById("TODO-tasks"); //ul of #TODO-tasks
-var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
+const taskInput = document.querySelector("#add-task"); //Add a new task
+const addButton = document.querySelector(".button-add");
+const incompleteTaskHolder = document.querySelector("#TODO-tasks"); //ul of TODO-tasks
+const completedTasksHolder = document.querySelector("#completed-tasks"); //ul of completed-tasks
 
 //New task list item
 var createNewTaskElement = function (taskString) {
@@ -23,12 +20,10 @@ var createNewTaskElement = function (taskString) {
   var label = document.createElement("label"); //label
   //input (text)
   var editInput = document.createElement("input"); //text
-  //button.edit
-  var editButton = document.createElement("button"); //edit button
-
-  //button.delete
-  var deleteButton = document.createElement("button"); //delete button
-  var deleteButtonImg = document.createElement("img"); //delete button image
+  
+  var editButton = document.createElement("button");
+  var deleteButton = document.createElement("button");
+  var deleteButtonImg = document.createElement("img");
 
   label.innerText = taskString;
   label.className = "task";
@@ -44,6 +39,7 @@ var createNewTaskElement = function (taskString) {
 
   deleteButton.className = "delete";
   deleteButtonImg.src = "./assets/remove.svg";
+  deleteButtonImg.alt = "remove-ico";
   deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
@@ -80,9 +76,9 @@ var editTask = function () {
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".edit");
 
-  //If class of the parent is .editmode
+  //If class of the parent is .editMode
   if (listItem.classList.contains("editMode")) {
-    //switch to .editmode
+    //switch to .editMode
     //label becomes the inputs value.
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
@@ -91,7 +87,7 @@ var editTask = function () {
     editBtn.innerText = "Save";
   }
 
-  //toggle .editmode on the parent.
+  //toggle .editMode on the parent.
   listItem.classList.toggle("editMode");
 };
 

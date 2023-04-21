@@ -76,8 +76,7 @@ button:hover {
 
 /* Heading */
 
-h3,
-label[for="add-task"] {
+h3 {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -158,7 +157,7 @@ button.delete img:hover {
 
 /* Completed */
 
-ul#completed-tasks label {
+#completed-tasks {
   text-decoration: line-through;
   color: #888;
 }
