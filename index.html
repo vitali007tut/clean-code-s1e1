@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css" media="screen">
   <title>Todo App</title>
@@ -11,22 +11,22 @@
     <a href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
   </header>
   <main class="main">
-    <section>
+    <section class="adding">
       <label for="add-task">
-        <h3 class="add-tittle">Add Item</h3>
+        <h3 class="adding__add-tittle">Add Item</h3>
       </label>
-      <div class="adding-wrapper">
+      <div class="adding__adding-wrapper">
         <input 
             id="add-task"
             type="text"
             class="task">
-        <button class="button-add">Add</button>
+        <button class="adding__button">Add</button>
       </div>
     </section>
-    <section>
+    <section class="todo">
       <h3>Todo</h3>
       <ul id="TODO-tasks">
-        <li class="task-wrapper">
+        <li class="todo__task">
           <input type="checkbox" class="checkbox-task">
           <label class="task">Pay Bills</label>
           <input 
@@ -38,7 +38,9 @@
           </button>
         </li>
         <li class="editMode">
-          <input type="checkbox" class="checkbox-task">
+          <input
+            type="checkbox"
+            class="checkbox-task">
           <label class="task">Go Shopping</label>
           <input 
               type="text" 
@@ -51,7 +53,7 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section class="completed">
       <h3>Completed</h3>
       <ul id="completed-tasks">
         <li>
