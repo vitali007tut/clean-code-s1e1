@@ -15,7 +15,7 @@ const createNewTaskElement = function (taskString) {
 
   const label = document.createElement("label");
   label.innerText = taskString;
-  label.classList.add("task");
+  label.classList.add("task-tittle");
 
   const editInput = document.createElement("input");
   editInput.type = "text";
@@ -23,12 +23,15 @@ const createNewTaskElement = function (taskString) {
 
   const editButton = document.createElement("button");
   editButton.innerText = "Edit";
+  editButton.classList.add("button");
   editButton.classList.add("edit");
 
   const deleteButton = document.createElement("button");
+  deleteButton.classList.add("button");
   deleteButton.classList.add("delete");
 
   const deleteButtonImg = document.createElement("img");
+  deleteButtonImg.classList.add("img-delete")
   deleteButtonImg.src = "./assets/remove.svg";
   deleteButtonImg.alt = "remove-ico";
   deleteButton.appendChild(deleteButtonImg);
@@ -60,8 +63,8 @@ const editTask = function () {
 
   const listItem = this.parentNode;
 
-  const editInput = listItem.querySelector("input[type=text]");
-  const label = listItem.querySelector("label");
+  const editInput = listItem.querySelector(".task");
+  const label = listItem.querySelector(".task-tittle");
   const editBtn = listItem.querySelector(".edit");
 
   //If class of the parent is .editMode
@@ -107,12 +110,7 @@ const taskIncomplete = function () {
   bindTaskEvents(listItem, taskCompleted);
 };
 
-// const ajaxRequest = function () {
-//   console.log("AJAX Request");
-// };
-
 addButton.addEventListener("click", addTask);
-// addButton.addEventListener("click", ajaxRequest);
 
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   console.log("bind list item events");

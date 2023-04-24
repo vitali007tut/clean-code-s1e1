@@ -58,7 +58,7 @@ button {
   display: flex;
 }
 
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -68,11 +68,12 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
-h3 {
+.adding__add-tittle,
+.tittle {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -82,7 +83,7 @@ h3 {
   text-transform: uppercase;
 }
 
-input.task {
+.task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -93,78 +94,65 @@ input.task {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  display: none;
 }
 
-input.task:focus {
+.adding__adding-wrapper .task {
+  display: inline-block;
+}
+
+.task:focus {
   color: #333;
 }
 
-/* New Task */
+.task-tittle {
+  flex-grow: 1;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
 
 .adding__add-tittle {
   display: block;
   margin: 0 0 20px;
 }
 
-/* Task list */
-
-li {
+.todo__task,
+.editMode,
+.completed-tasks {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-/* li > * {
   vertical-align: middle;
-} */
+}
 
 .checkbox-task {
   margin: 0 10px;
   cursor: pointer;
 }
 
-li > label {
-  padding-left: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  width: 226px;
-}
-
-li > input.task {
-  width: 226px;
-}
-
-button.delete img {
+.img-delete {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.img-delete:hover {
   transform: rotateZ(0);
 }
-
-/* Completed */
 
 #completed-tasks {
   text-decoration: line-through;
   color: #888;
 }
 
-/* Edit Task */
-
-ul li input.task {
-  display: none;
-}
-
-ul li.editMode input.task {
+.editMode .task {
   display: inline-block;
-  width: 224px;
 }
 
-ul li.editMode label {
+.editMode .task-tittle {
   display: none;
 }
