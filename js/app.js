@@ -1,6 +1,6 @@
 const taskInput = document.querySelector("#add-task");
 const addButton = document.querySelector(".adding__button");
-const incompleteTaskHolder = document.querySelector("#TODO-tasks"); //ul of TODO-tasks
+const incompleteTaskHolder = document.querySelector("#todo-tasks"); //ul of TODO-tasks
 const completedTasksHolder = document.querySelector("#completed-tasks"); //ul of completed-tasks
 
 //New task list item
@@ -67,9 +67,9 @@ const editTask = function () {
   const label = listItem.querySelector(".task-tittle");
   const editBtn = listItem.querySelector(".edit");
 
-  //If class of the parent is .editMode
-  if (listItem.classList.contains("editMode")) {
-    //switch to .editMode
+  //If class of the parent is .edit-mode
+  if (listItem.classList.contains("edit-mode")) {
+    //switch to .edit-mode
     //label becomes the inputs value.
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
@@ -78,8 +78,8 @@ const editTask = function () {
     editBtn.innerText = "Save";
   }
 
-  //toggle .editMode on the parent.
-  listItem.classList.toggle("editMode");
+  //toggle .edit-mode on the parent.
+  listItem.classList.toggle("edit-mode");
 };
 
 const deleteTask = function () {

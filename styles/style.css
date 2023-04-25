@@ -31,7 +31,7 @@ button {
 }
 
 .header a {
-  font-family: fantasy, cursive;
+  font-family: fantasy;
 }
 
 @media (max-width: 768px) {
@@ -118,7 +118,7 @@ button {
 }
 
 .todo__task,
-.editMode,
+.edit-mode,
 .completed-tasks {
   overflow: hidden;
   padding: 20px 0;
@@ -149,10 +149,10 @@ button {
   color: #888;
 }
 
-.editMode .task {
+.edit-mode .task {
   display: inline-block;
 }
 
-.editMode .task-tittle {
+.edit-mode .task-tittle {
   display: none;
 }
