@@ -1,0 +1,158 @@
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Lato, sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li, 
+h3 {
+  list-style: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
+.header {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  text-align: right;
+}
+
+.header img {
+  width: 100%;
+}
+
+.header a {
+  font-family: fantasy;
+}
+
+@media (max-width: 768px) {
+
+  .header { 
+    text-align: center;
+  }
+
+}
+
+.main {
+  display: block;
+  width: 500px;
+  margin: 0 auto 0;
+}
+
+.task {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.adding__adding-wrapper {
+  display: flex;
+}
+
+.button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #3a3a3a;
+}
+
+.adding__add-tittle,
+.tittle {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.task {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+  display: none;
+}
+
+.adding__adding-wrapper .task {
+  display: inline-block;
+}
+
+.task:focus {
+  color: #333;
+}
+
+.task-tittle {
+  flex-grow: 1;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.adding__add-tittle {
+  display: block;
+  margin: 0 0 20px;
+}
+
+.todo__task,
+.edit-mode,
+.completed-tasks {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.checkbox-task {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.img-delete {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+
+.img-delete:hover {
+  transform: rotateZ(0);
+}
+
+#completed-tasks {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.edit-mode .task {
+  display: inline-block;
+}
+
+.edit-mode .task-tittle {
+  display: none;
+}
